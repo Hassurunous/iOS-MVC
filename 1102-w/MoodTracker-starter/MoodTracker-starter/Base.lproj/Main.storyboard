@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D5F-Ns-PwS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D5F-Ns-PwS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FY2-3Z-fSX" id="TD3-iM-guv">
-                                    <frame key="frameInset" width="375" height="66"/>
+                                    <frame key="frameInset" width="375" height="65.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K8c-qa-EME">
@@ -68,6 +68,11 @@
                                         <constraint firstItem="Fea-dc-gC1" firstAttribute="centerY" secondItem="TD3-iM-guv" secondAttribute="centerY" id="v4c-kE-sUE"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moodButton" destination="Fea-dc-gC1" id="1fI-sH-0EK"/>
+                                    <outlet property="moodDescriptionLabel" destination="qhZ-su-edY" id="8GT-Cf-ug3"/>
+                                    <outlet property="nameLabel" destination="K8c-qa-EME" id="AyJ-LT-njb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -145,6 +150,10 @@
                             <constraint firstItem="NS5-Ir-Knh" firstAttribute="leading" secondItem="jyb-Hv-bSu" secondAttribute="leading" id="uBb-Uf-d0B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moodSegmentedControl" destination="3J3-mB-rYw" id="tMp-Zn-pi6"/>
+                        <outlet property="nameTextField" destination="80W-fN-8Tj" id="RJU-WY-HLK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDx-6x-MVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

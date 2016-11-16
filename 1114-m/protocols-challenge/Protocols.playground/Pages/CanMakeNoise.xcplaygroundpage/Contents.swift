@@ -3,26 +3,36 @@
 import UIKit
 
 protocol CanMakeNoise {
-  func makeNoise()
+  func makeNoise() -> String
 }
 
-class Human {
-  
+class Human: CanMakeNoise {
+    func makeNoise() -> String {
+        return("#HumanNoises")
+    }
 }
 
-class Pig {
-  
+class Pig: CanMakeNoise {
+    func makeNoise() -> String {
+        return("#Oink")
+    }
 }
 
-class Cow {
-  
+class Cow: CanMakeNoise {
+    func makeNoise() -> String {
+        return("#Moo")
+    }
 }
 
 let human = Human()
 let pig = Pig()
 let cow = Cow()
 
-// let arrayOfNoiseMaker: [CanMakeNoise] = [human, pig, cow]
+let arrayOfNoiseMaker: [CanMakeNoise] = [human, pig, cow]
+
+for noisemaker in arrayOfNoiseMaker {
+    print(noisemaker.makeNoise())
+}
 
 /*:
  **Tasks**:

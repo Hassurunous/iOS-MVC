@@ -15,5 +15,4 @@ class Friend {
     self.name = name
     self.mood = mood
   }
-  
 }
