@@ -18,22 +18,27 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
+        cityLabel.text = cities[0]
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        print(#file, #function, #line)
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        print(#file, #function, #line)
         return cities.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        print(#file, #function, #line)
         return cities[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        cityLabel.text = cities[pickerView.selectedRow(inComponent: row)]
+        print(#file, #function, #line)
+        cityLabel.text = cities[row]
     }
     
 }
