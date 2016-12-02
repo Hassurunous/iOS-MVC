@@ -23,29 +23,52 @@ PlaygroundPage.current.liveView = canvas // make the canvas appear in the assist
 /*:
  #### 1st implementation
  */
-// configure blue
+// Configure Blue Square
 let margin = 20
+let blueWidth = Int(canvas.frame.size.width * 0.5)
 let blueX = margin
 let blueY = margin
-let blueWidth = canvas.frame.size.width * 0.5
 let blueHeight = Int(canvas.frame.size.height) - margin - margin
-let blueFrame = CGRect(x: blueX, y: blueY, width: Int(blueWidth), height: blueHeight)
-
+let blueFrame = CGRect(x: blueX, y:blueY, width: blueWidth, height: blueHeight)
 let blueView = UIView(frame: blueFrame)
 blueView.backgroundColor = .blue
 canvas.addSubview(blueView)
 
-// configure green
-let greenWidth = blueView.frame.size.width * 0.5
+//Configure Green Square
+let greenWidth = Int(blueView.frame.size.width / 2)
 let greenHeight = greenWidth
-let greenX = canvas.frame.size.width - greenWidth
-
-let greenFrame = CGRect(x: Int(greenX), y: 0, width: Int(greenWidth), height: Int(greenHeight))
+let greenX = Int(canvas.frame.size.width) - greenWidth
+let greenFrame = CGRect(x: greenX, y:0, width: greenWidth, height: greenHeight)
 let greenView = UIView(frame: greenFrame)
 greenView.backgroundColor = .green
 canvas.addSubview(greenView)
 
 greenView.center.y = blueView.center.y
+
+
+//// configure blue
+//let margin = 20
+//let blueX = margin
+//let blueY = margin
+//let blueWidth = canvas.frame.size.width * 0.5
+//let blueHeight = Int(canvas.frame.size.height) - margin - margin
+//let blueFrame = CGRect(x: blueX, y: blueY, width: Int(blueWidth), height: blueHeight)
+//
+//let blueView = UIView(frame: blueFrame)
+//blueView.backgroundColor = .blue
+//canvas.addSubview(blueView)
+//
+//// configure green
+//let greenWidth = blueView.frame.size.width * 0.5
+//let greenHeight = greenWidth
+//let greenX = canvas.frame.size.width - greenWidth
+//
+//let greenFrame = CGRect(x: Int(greenX), y: 0, width: Int(greenWidth), height: Int(greenHeight))
+//let greenView = UIView(frame: greenFrame)
+//greenView.backgroundColor = .green
+//canvas.addSubview(greenView)
+//
+//greenView.center.y = blueView.center.y
 /*:
 #### 2nd implementation
 */

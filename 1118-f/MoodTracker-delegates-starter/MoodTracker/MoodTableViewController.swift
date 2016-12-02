@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoodTableViewController: UITableViewController {
+class MoodTableViewController: UITableViewController, FriendTableViewCellDelegate, AddFriendViewControllerDelegate {
 
   var friends: [Friend] = []
   
@@ -28,7 +28,7 @@ class MoodTableViewController: UITableViewController {
     let cell = tableView.dequeueReusableCell(withIdentifier: "FriendTableViewCell") as! FriendTableViewCell
     let friend = friends[indexPath.row]
     cell.friend = friend // this triggers the didSet in FriendTableViewCell and configures the cell's UI
-    cell.moodTableViewController = self // make sure FriendTableViewCell can talk to MoodTableViewController
+    cell.delegate = self // make sure FriendTableViewCell can talk to MoodTableViewController
     return cell
   }
   
@@ -51,7 +51,7 @@ class MoodTableViewController: UITableViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let addFriendViewController = segue.destination as! AddFriendViewController
-    addFriendViewController.moodTableViewController = self  // make sure AddFriendViewController can talk to MoodTableViewController
+    addFriendViewController.delegate = self  // make sure AddFriendViewController can talk to MoodTableViewController
   }
   
   
